@@ -49,10 +49,10 @@ describe("User Sign-up and Login", function () {
 
   it("should allow a visitor to sign-up, login, and logout", function () {
     const userInfo = {
-      firstName: "Bob",
-      lastName: "Ross",
-      username: "PainterJoy90",
-      password: "s3cret",
+      firstName: "Calin",
+      lastName: "Boga",
+      username: "cboga",
+      password: "testing",
     };
 
     // Sign-up User
@@ -158,7 +158,7 @@ describe("User Sign-up and Login", function () {
     cy.getBySel("signin-error")
       .should("be.visible")
       .and("have.text", "Username or password is invalid");
-    cy.visualSnapshot("Sign In, Invalid Username and Password, Username or Password is Invalid");
+    cy.visualSnapshot("Sign In, Invalid Username and Password, Username or password is invalid");
   });
 
   it("should error for an invalid password for existing user", function () {
